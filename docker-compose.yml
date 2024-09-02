@@ -5,19 +5,19 @@ services:
     build:
       context: ./mompopcafe 
       dockerfile: Dockerfile
-    image: sreedocker123/mompopcafeapp:v1
-    container_name: mompopcafeapp     
+    image: neehar2601/mompopcafeapp:v1
+    container_name: mompopcafeapp_n    
     ports:
-      - "5000:80"  # Change port if necessary
+      - "5010:80"  # Change port if necessary
     depends_on:
-      - mysql
+      - mysql_n
         #volumes:
         #- admin_data:/path/to/admin_service/data
 
 
   mysql:
     image: mysql:latest
-    container_name: mysql
+    container_name: mysql_n
     # command: --default-authentication-plugin=mysql_native_password
     environment:
       MYSQL_ROOT_PASSWORD: Msois@123  
